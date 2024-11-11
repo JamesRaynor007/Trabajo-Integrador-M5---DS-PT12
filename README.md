@@ -1,25 +1,34 @@
 ANALISIS EXPLORATORIO DE DATOS (EDA) 
 
 A continuación expongo mi labor realizada sobre los archivos que detallaré, los que se relacionan con el trabajo AIRBNB.
+
 **Archivo 1:** listing.csv
+
 Este archivo contiene la información de los anuncios de Airbnb. Cada fila representa un anuncio.
+
 **Archivo 2:** reviews.csv
+
 Este archivo contiene las reseñas de los anuncios de Airbnb. 
+
 **Archivo 3:** calendar.csv
+
 Este archivo contiene la disponibilidad de los anuncios de Airbnb. 
+
 
 
 **Los archivos están disponibles en el siguiente link ** --> https://drive.google.com/drive/u/0/folders/1jMHqEPtrbXW-D8noU5XaOuwu-Bhl3Zvl?hl=es_ES
 
 Inicio con Python, realizando la carga de los archivos para evaluar su contenido, de manera paralela, hago el mismo procedimiento de carga en Power BI.
+
 Esto me permite trabajar a pantalla partida, para conocer el contenido de los archivos, poder filtrar aquellos datos de columnas repetidos, vacíos o no pertinentes al análisis.
 
-import os
-import pandas as pd
-import csv
-os.chdir("2 AirBnB")
-Calendario = pd.read_csv("calendar.csv")
-Listado = pd.read_csv("listings.csv", low_memory=False)
+
+import os \n
+import pandas as pd\n
+import csv\n
+os.chdir("2 AirBnB")\n
+Calendario = pd.read_csv("calendar.csv")\n
+Listado = pd.read_csv("listings.csv", low_memory=False)\n
 Resenias = pd.read_csv("reviews.csv")
 Columnas_Listado = list(Listado.columns)
 print(Columnas_Listado) # Esto imprime un resumen, por lo que la desagrego
